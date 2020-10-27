@@ -16,6 +16,9 @@ app.get('/', (req: any, res: any, next: any) => res.json({msg: 'Fuck you'}));
 
 io.on('connection', (socket: any) => {
   console.log('User join your channel!');
+  socket.on('local', (msg: String) => {socket.emit('chat message', msg);});
+  socket.on('global', (msg: String) => {io.emit('chat message', msg);});
+  socket.on('notme', (msg: String) => {socket.broadcast.emit('chat message', msg);});
   socket.on('disconnect', () => console.log('User left your channel!'));
 });
 
