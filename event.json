@@ -1,0 +1,1395 @@
+{
+  "events": {
+    "character": [
+      {
+        "text": "You meet a asian man in the forest... He comes to talk to you : Hello, I'm alone, may I join you?",
+        "img": [
+          "img/Persos/asianmen0.png",
+          "img/Persos/asianmen1.png",
+          "img/Persos/asianmen2.png",
+          "img/Persos/asianmen3.png"
+        ],
+        "answer": [
+          {
+            "text": "Yes",
+            "subevent": false,
+            "consequence": {
+              "food": {
+                "recover": 5,
+                "loose": 3,
+              },
+              "wood": {
+                "recover": 8,
+                "loose": 3,
+              },
+              "water": {
+                "recover": 6,
+                "loose": 3,
+              },
+              "population": { "actual": 1 }
+            },
+            "event": {
+
+            }
+          },
+          {
+            "text": "No",
+            "subevent": false,
+            "consequence": {
+            },
+            "event": {
+            }
+          }
+        ]
+      },
+      {
+        "text": "You meet a asian woman in the forest... She comes to talk to you : Hello, I'm lost and alone, can I join you?",
+        "img": [
+          "img/Persos/asianwomen0.png",
+          "img/Persos/asianwomen1.png"
+        ],
+        "answer": [
+          {
+            "text": "Yes",
+            "subevent": false,
+            "consequence": {
+                "food": {
+                  "recover": 8,
+                  "loose": 3,
+                },
+                "wood": {
+                  "recover": 5,
+                  "loose": 3,
+                },
+                "water": {
+                  "recover": 6,
+                  "loose": 3,
+                },
+                "population": { "actual": 1 }
+            },
+            "event": {
+
+            }
+          },
+          {
+            "text": "No",
+            "subevent": false,
+            "consequence": {
+
+            },
+            "event": {
+
+            }
+          }
+        ]
+      },
+      {
+        "text": "You meet a fat Asian asking you if there is a place in the village ?",
+        "img": [
+          "img/Persos/bigasianwomen.png",
+          "img/Persos/bigasianmen.png"
+        ],
+        "answer": [
+          {
+            "text": "Yes, come with us",
+            "subevent": false,
+            "consequence": {
+                "food": {
+                  "recover": 6,
+                  "loose": 4,
+                },
+                "wood": {
+                  "recover": 8,
+                  "loose": 3,
+                },
+                "water": {
+                  "recover": 7,
+                  "loose": 3,
+                },
+                "population": { "actual": 1 }
+            },
+            "event": {
+
+            }
+          },
+          {
+            "text": "No sorry, it's not possible",
+            "subevent": false,
+            "consequence": {
+
+            },
+            "event": {
+
+            }
+          }
+        ]
+      },
+      {
+        "text": "You meet a fat Black asking you if there is a small place in the village ?",
+        "img": [
+          "img/Persos/bigblackwomen.png",
+          "img/Persos/bigblackmen0.png",
+          "img/Persos/bigblackmen1.png"
+        ],
+        "answer": [
+          {
+            "text": "Yes, come with us",
+            "subevent": false,
+            "consequence": {
+                "food": {
+                  "recover": 6,
+                  "loose": 4,
+                },
+                "wood": {
+                  "recover": 7,
+                  "loose": 3,
+                },
+                "water": {
+                  "recover": 8,
+                  "loose": 3,
+                },
+                "population": { "actual": 1 }
+            },
+            "event": {
+
+            }
+          },
+          {
+            "text": "No sorry, it's not possible",
+            "subevent": false,
+            "consequence": {
+
+            },
+            "event": {
+
+            }
+          }
+        ]
+      },
+      {
+        "text": "You meet a fat person asking you if there is a small place in the village ?",
+        "img": [
+          "img/Persos/bigwomen.png",
+          "img/Persos/bigmen0.png",
+          "img/Persos/bigmen1.png"
+        ],
+        "answer": [
+          {
+            "text": "Yes, come with us",
+            "subevent": false,
+            "consequence": {
+                "food": {
+                  "recover": 6,
+                  "loose": 4,
+                },
+                "wood": {
+                  "recover": 7,
+                  "loose": 3,
+                },
+                "water": {
+                  "recover": 7,
+                  "loose": 3,
+                },
+                "population": { "actual": 1 }
+            },
+            "event": {
+
+            }
+          },
+          {
+            "text": "No sorry, it's not possible",
+            "subevent": false,
+            "consequence": {
+
+            },
+            "event": {
+
+            }
+          }
+        ]
+      },
+      {
+        "text": "You meet a black men asking if he can join you, He say he will work hard for help !",
+        "img": [
+          "img/Persos/blackmen0.png",
+          "img/Persos/blackmen1.png",
+          "img/Persos/blackmen2.png",
+          "img/Persos/blackmen3.png"
+        ],
+        "answer": [
+          {
+            "text": "Yes, we need help !",
+            "subevent": false,
+            "consequence": {
+                "food": {
+                  "recover": 6,
+                  "loose": 2,
+                },
+                "wood": {
+                  "recover": 6,
+                  "loose": 3,
+                },
+                "water": {
+                  "recover": 6,
+                  "loose": 2,
+                },
+                "population": { "actual": 1 }
+            },
+            "event": {
+
+            }
+          },
+          {
+            "text": "Sorry we can't help you",
+            "subevent": false,
+            "consequence": {
+
+            },
+            "event": {
+
+            }
+          }
+        ]
+      },
+      {
+        "text": "You meet a black women asking if she can join you, He say she will help as much as possible !",
+        "img": [
+          "img/Persos/blackwomen.png"
+        ],
+        "answer": [
+          {
+            "text": "Yes, we need help !",
+            "subevent": false,
+            "consequence": {
+                "food": {
+                  "recover": 7,
+                  "loose": 3,
+                },
+                "wood": {
+                  "recover": 6,
+                  "loose": 3,
+                },
+                "water": {
+                  "recover": 6,
+                  "loose": 2,
+                },
+                "population": { "actual": 1 }
+            },
+            "event": {
+
+            }
+          },
+          {
+            "text": "Sorry we can't help you",
+            "subevent": false,
+            "consequence": {
+
+            },
+            "event": {
+
+            }
+          }
+        ]
+      },
+      {
+        "text": "You meet a little asian boy asking if he can join you, He say he will fight against monster !",
+        "img": [
+          "img/Persos/littleasianboy.png"
+        ],
+        "answer": [
+          {
+            "text": "Yes, your bravery is needed !",
+            "subevent": false,
+            "consequence": {
+                "food": {
+                  "recover": 2,
+                  "loose": 1,
+                },
+                "wood": {
+                  "recover": 2,
+                  "loose": 1,
+                },
+                "water": {
+                  "recover": 3,
+                  "loose": 1,
+                },
+                "population": { "actual": 1 }
+            },
+            "event": {
+
+            }
+          },
+          {
+            "text": "Sorry we can't take a children",
+            "subevent": false,
+            "consequence": {
+
+            },
+            "event": {
+
+            }
+          }
+        ]
+      },
+      {
+        "text": "You meet a little asian girl asking if she can join you, He say she will make everyone smile !",
+        "img": [
+          "img/Persos/littleasiangirl.png"
+        ],
+        "answer": [
+          {
+            "text": "Yes, your happiness is needed !",
+            "subevent": false,
+            "consequence": {
+                "food": {
+                  "recover": 3,
+                  "loose": 1,
+                },
+                "wood": {
+                  "recover": 2,
+                  "loose": 1,
+                },
+                "water": {
+                  "recover": 2,
+                  "loose": 1,
+                },
+                "population": { "actual": 1 }
+            },
+            "event": {
+
+            }
+          },
+          {
+            "text": "Sorry we can't take a children",
+            "subevent": false,
+            "consequence": {
+
+            },
+            "event": {
+
+            }
+          }
+        ]
+      },
+      {
+        "text": "You meet a little black boy asking if he can join you, He say he will fight against monster !",
+        "img": [
+          "img/Persos/littleblackboy.png"
+        ],
+        "answer": [
+          {
+            "text": "Yes, your bravery is needed !",
+            "subevent": false,
+            "consequence": {
+                "food": {
+                  "recover": 3,
+                  "loose": 1,
+                },
+                "wood": {
+                  "recover": 2,
+                  "loose": 1,
+                },
+                "water": {
+                  "recover": 2,
+                  "loose": 1,
+                },
+                "population": { "actual": 1 }
+            },
+            "event": {
+
+            }
+          },
+          {
+            "text": "Sorry we can't take a children",
+            "subevent": false,
+            "consequence": {
+
+            },
+            "event": {
+
+            }
+          }
+        ]
+      },
+      {
+        "text": "You meet a little black girl asking if she can join you, He say she will make everyone smile !",
+        "img": [
+          "img/Persos/littleblackgirl.png"
+        ],
+        "answer": [
+          {
+            "text": "Yes, your happiness is needed !",
+            "subevent": false,
+            "consequence": {
+                "food": {
+                  "recover": 2,
+                  "loose": 1,
+                },
+                "wood": {
+                  "recover": 2,
+                  "loose": 1,
+                },
+                "water": {
+                  "recover": 3,
+                  "loose": 1,
+                },
+                "population": { "actual": 1 }
+            },
+            "event": {
+
+            }
+          },
+          {
+            "text": "Sorry we can't take a children",
+            "subevent": false,
+            "consequence": {
+
+            },
+            "event": {
+
+            }
+          }
+        ]
+      },
+      {
+        "text": "You meet a little boy asking if he can join you, He say he will fight against monster !",
+        "img": [
+          "img/Persos/littleboy.png"
+        ],
+        "answer": [
+          {
+            "text": "Yes, your bravery is needed !",
+            "subevent": false,
+            "consequence": {
+                "food": {
+                  "recover": 2,
+                  "loose": 1,
+                },
+                "wood": {
+                  "recover": 2,
+                  "loose": 1,
+                },
+                "water": {
+                  "recover": 2,
+                  "loose": 1,
+                },
+                "population": { "actual": 1 }
+            },
+            "event": {
+
+            }
+          },
+          {
+            "text": "Sorry we can't take a children",
+            "subevent": false,
+            "consequence": {
+
+            },
+            "event": {
+
+            }
+          }
+        ]
+      },
+      {
+        "text": "You meet a little girl asking if she can join you, He say she will make everyone smile !",
+        "img": [
+          "img/Persos/littlegirl.png"
+        ],
+        "answer": [
+          {
+            "text": "Yes, your happiness is needed !",
+            "subevent": false,
+            "consequence": {
+                "food": {
+                  "recover": 2,
+                  "loose": 1,
+                },
+                "wood": {
+                  "recover": 2,
+                  "loose": 1,
+                },
+                "water": {
+                  "recover": 2,
+                  "loose": 1,
+                },
+                "population": { "actual": 1 }
+            },
+            "event": {
+
+            }
+          },
+          {
+            "text": "Sorry we can't take a children",
+            "subevent": false,
+            "consequence": {
+
+            },
+            "event": {
+
+            }
+          }
+        ]
+      },
+      {
+        "text": "You meet a man in the forest... He comes to talk to you : Hello, I'm alone, may I join you?",
+        "img": [
+          "img/Persos/men0.png",
+          "img/Persos/men1.png",
+          "img/Persos/men2.png",
+          "img/Persos/men3.png",
+          "img/Persos/men4.png",
+          "img/Persos/men5.png",
+          "img/Persos/men6.png"
+        ],
+        "answer": [
+          {
+            "text": "Yes",
+            "subevent": false,
+            "consequence": {
+              "food": {
+                "recover": 6,
+                "loose": 3,
+              },
+              "wood": {
+                "recover": 6,
+                "loose": 3,
+              },
+              "water": {
+                "recover": 6,
+                "loose": 3,
+              },
+              "population": { "actual": 1 }
+            },
+            "event": {
+
+            }
+          },
+          {
+            "text": "No",
+            "subevent": false,
+            "consequence": {
+            },
+            "event": {
+            }
+          }
+        ]
+      },
+      {
+        "text": "You meet a old asian men asking kindly if he can enter your village ?",
+        "img": [
+          "img/Persos/asianmen4.png"
+        ],
+        "answer": [
+          {
+            "text": "Yes of course, we will not let our memories die",
+            "subevent": false,
+            "consequence": {
+              "food": {
+                "recover": 4,
+                "loose": 2,
+              },
+              "wood": {
+                "recover": 4,
+                "loose": 2,
+              },
+              "water": {
+                "recover": 4,
+                "loose": 2,
+              },
+              "population": { "actual": 1 }
+            },
+            "event": {
+
+            }
+          },
+          {
+            "text": "No sorry old men",
+            "subevent": false,
+            "consequence": {
+            },
+            "event": {
+            }
+          }
+        ]
+      },
+      {
+        "text": "You meet a old asian women asking kindly if she can enter your village ?",
+        "img": [
+          "img/Persos/oldasianwomen.png"
+        ],
+        "answer": [
+          {
+            "text": "Yes of course, we will not let our memories die",
+            "subevent": false,
+            "consequence": {
+              "food": {
+                "recover": 5,
+                "loose": 2,
+              },
+              "wood": {
+                "recover": 3,
+                "loose": 2,
+              },
+              "water": {
+                "recover": 4,
+                "loose": 2,
+              },
+              "population": { "actual": 1 }
+            },
+            "event": {
+
+            }
+          },
+          {
+            "text": "No sorry old men",
+            "subevent": false,
+            "consequence": {
+            },
+            "event": {
+            }
+          }
+        ]
+      },
+      {
+        "text": "You meet a old black men in the forest asking kindly if he can enter your village ?",
+        "img": [
+          "img/Persos/blackmen0.png",
+          "img/Persos/blackmen1.png",
+          "img/Persos/blackmen2.png",
+          "img/Persos/blackmen3.png"
+        ],
+        "answer": [
+          {
+            "text": "Yes of course, we will not let our memories die",
+            "subevent": false,
+            "consequence": {
+              "food": {
+                "recover": 4,
+                "loose": 1,
+              },
+              "wood": {
+                "recover": 4,
+                "loose": 2,
+              },
+              "water": {
+                "recover": 4,
+                "loose": 2,
+              },
+              "population": { "actual": 1 }
+            },
+            "event": {
+
+            }
+          },
+          {
+            "text": "No sorry old men",
+            "subevent": false,
+            "consequence": {
+            },
+            "event": {
+            }
+          }
+        ]
+      },
+      {
+        "text": "You meet a old black women in the forest asking kindly if she can enter your village ?",
+        "img": [
+          "img/Persos/oldblackwomen.png"
+        ],
+        "answer": [
+          {
+            "text": "Yes of course, we will not let our memories die",
+            "subevent": false,
+            "consequence": {
+              "food": {
+                "recover": 5,
+                "loose": 1,
+              },
+              "wood": {
+                "recover": 4,
+                "loose": 2,
+              },
+              "water": {
+                "recover": 4,
+                "loose": 2,
+              },
+              "population": { "actual": 1 }
+            },
+            "event": {
+
+            }
+          },
+          {
+            "text": "No sorry old men",
+            "subevent": false,
+            "consequence": {
+            },
+            "event": {
+            }
+          }
+        ]
+      },
+      {
+        "text": "You meet a old men asking kindly if he can enter your village ?",
+        "img": [
+          "img/Persos/men0.png",
+          "img/Persos/men1.png"
+        ],
+        "answer": [
+          {
+            "text": "Yes of course, we will not let our memories die",
+            "subevent": false,
+            "consequence": {
+              "food": {
+                "recover": 4,
+                "loose": 2,
+              },
+              "wood": {
+                "recover": 4,
+                "loose": 2,
+              },
+              "water": {
+                "recover": 4,
+                "loose": 2,
+              },
+              "population": { "actual": 1 }
+            },
+            "event": {
+
+            }
+          },
+          {
+            "text": "No sorry old men",
+            "subevent": false,
+            "consequence": {
+            },
+            "event": {
+            }
+          }
+        ]
+      },
+      {
+        "text": "You meet a old women asking kindly if she can enter your village ?",
+        "img": [
+          "img/Persos/oldwomen.png"
+        ],
+        "answer": [
+          {
+            "text": "Yes of course, we will not let our memories die",
+            "subevent": false,
+            "consequence": {
+              "food": {
+                "recover": 5,
+                "loose": 2,
+              },
+              "wood": {
+                "recover": 4,
+                "loose": 2,
+              },
+              "water": {
+                "recover": 4,
+                "loose": 2,
+              },
+              "population": { "actual": 1 }
+            },
+            "event": {
+
+            }
+          },
+          {
+            "text": "No sorry old men",
+            "subevent": false,
+            "consequence": {
+            },
+            "event": {
+            }
+          }
+        ]
+      },
+      {
+        "text": "You meet a Teenger asian boy crying",
+        "img": [
+          "img/Persos/asianmen0.png",
+          "img/Persos/asianmen1.png",
+          "img/Persos/asianmen2.png",
+          "img/Persos/asianmen3.png",
+          "img/Persos/asianmen4.png"
+        ],
+        "answer": [
+          {
+            "text": "Come with us !",
+            "subevent": false,
+            "consequence": {
+              "food": {
+                "recover": 5,
+                "loose": 2,
+              },
+              "wood": {
+                "recover": 6,
+                "loose": 3,
+              },
+              "water": {
+                "recover": 5,
+                "loose": 3,
+              },
+              "population": { "actual": 1 }
+            },
+            "event": {
+
+            }
+          },
+          {
+            "text": "Let him cry",
+            "subevent": false,
+            "consequence": {
+            },
+            "event": {
+            }
+          },
+          {
+            "text": "Give him food and water",
+            "subevent": false,
+            "consequence": {
+              "food": {
+                "actual": -5,
+              },
+              "water": {
+                "actual": -5,
+              }
+            },
+            "event": {
+            }
+          }
+        ]
+      },
+      {
+        "text": "You meet a Teenger asian girl crying",
+        "img": [
+          "img/Persos/asianwomen0.png",
+          "img/Persos/asianwomen1.png",
+        ],
+        "answer": [
+          {
+            "text": "Come with us !",
+            "subevent": false,
+            "consequence": {
+              "food": {
+                "recover": 6,
+                "loose": 2,
+              },
+              "wood": {
+                "recover": 5,
+                "loose": 3,
+              },
+              "water": {
+                "recover": 5,
+                "loose": 3,
+              },
+              "population": { "actual": 1 }
+            },
+            "event": {
+
+            }
+          },
+          {
+            "text": "Let her cry",
+            "subevent": false,
+            "consequence": {
+            },
+            "event": {
+            }
+          },
+          {
+            "text": "Give her food and water",
+            "subevent": false,
+            "consequence": {
+              "food": {
+                "actual": -5,
+              },
+              "water": {
+                "actual": -5,
+              }
+            },
+            "event": {
+            }
+          }
+        ]
+      },
+      {
+        "text": "You meet a Teenger black boy crying",
+        "img": [
+          "img/Persos/blackmen0.png",
+          "img/Persos/blackmen1.png",
+          "img/Persos/blackmen2.png",
+          "img/Persos/blackmen3.png"
+        ],
+        "answer": [
+          {
+            "text": "Come with us !",
+            "subevent": false,
+            "consequence": {
+              "food": {
+                "recover": 5,
+                "loose": 2,
+              },
+              "wood": {
+                "recover": 5,
+                "loose": 3,
+              },
+              "water": {
+                "recover": 5,
+                "loose": 2,
+              },
+              "population": { "actual": 1 }
+            },
+            "event": {
+
+            }
+          },
+          {
+            "text": "Let him cry",
+            "subevent": false,
+            "consequence": {
+            },
+            "event": {
+            }
+          },
+          {
+            "text": "Give him food and water",
+            "subevent": false,
+            "consequence": {
+              "food": {
+                "actual": -5,
+              },
+              "water": {
+                "actual": -5,
+              }
+            },
+            "event": {
+            }
+          }
+        ]
+      },
+      {
+        "text": "You meet a Teenger black girl crying",
+        "img": [
+          "img/Persos/blackwomen.png"
+        ],
+        "answer": [
+          {
+            "text": "Come with us !",
+            "subevent": false,
+            "consequence": {
+              "food": {
+                "recover": 6,
+                "loose": 2,
+              },
+              "wood": {
+                "recover": 5,
+                "loose": 2,
+              },
+              "water": {
+                "recover": 5,
+                "loose": 2,
+              },
+              "population": { "actual": 1 }
+            },
+            "event": {
+
+            }
+          },
+          {
+            "text": "Let her cry",
+            "subevent": false,
+            "consequence": {
+            },
+            "event": {
+            }
+          },
+          {
+            "text": "Give her food and water",
+            "subevent": false,
+            "consequence": {
+              "food": {
+                "actual": -5,
+              },
+              "water": {
+                "actual": -5,
+              }
+            },
+            "event": {
+            }
+          }
+        ]
+      },
+      {
+        "text": "You meet a Teenger boy crying",
+        "img": [
+          "img/Persos/men0.png",
+        ],
+        "answer": [
+          {
+            "text": "Come with us !",
+            "subevent": false,
+            "consequence": {
+              "food": {
+                "recover": 5,
+                "loose": 3,
+              },
+              "wood": {
+                "recover": 5,
+                "loose": 3,
+              },
+              "water": {
+                "recover": 5,
+                "loose": 3,
+              },
+              "population": { "actual": 1 }
+            },
+            "event": {
+
+            }
+          },
+          {
+            "text": "Let him cry",
+            "subevent": false,
+            "consequence": {
+            },
+            "event": {
+            }
+          },
+          {
+            "text": "Give him food and water",
+            "subevent": false,
+            "consequence": {
+              "food": {
+                "actual": -8,
+              },
+              "water": {
+                "actual": -8,
+              }
+            },
+            "event": {
+            }
+          }
+        ]
+      },
+      {
+        "text": "You meet a Teenger girl crying",
+        "img": [
+          "img/Persos/women0.png",
+          "img/Persos/women1.png",
+          "img/Persos/women2.png"
+        ],
+        "answer": [
+          {
+            "text": "Come with us !",
+            "subevent": false,
+            "consequence": {
+              "food": {
+                "recover": 6,
+                "loose": 3,
+              },
+              "wood": {
+                "recover": 5,
+                "loose": 3,
+              },
+              "water": {
+                "recover": 5,
+                "loose": 3,
+              },
+              "population": { "actual": 1 }
+            },
+            "event": {
+
+            }
+          },
+          {
+            "text": "Let her cry",
+            "subevent": false,
+            "consequence": {
+            },
+            "event": {
+            }
+          },
+          {
+            "text": "Give her food and water",
+            "subevent": false,
+            "consequence": {
+              "food": {
+                "actual": -8,
+              },
+              "water": {
+                "actual": -8,
+              }
+            },
+            "event": {
+            }
+          }
+        ]
+      },
+      {
+        "text": "Hello, I'm Brigom ! I'm strong and smart ! I will make this village better !",
+        "img": [
+          "img/Persos/men7.png",
+        ],
+        "answer": [
+          {
+            "text": "Come with us !",
+            "subevent": false,
+            "consequence": {
+              "food": {
+                "recover": -2,
+                "loose": 5,
+              },
+              "wood": {
+                "recover": -2,
+                "loose": 5,
+              },
+              "water": {
+                "recover": -2,
+                "loose": 5,
+              },
+              "population": { "actual": 1 }
+            },
+            "event": {
+
+            }
+          },
+          {
+            "text": "No sorry",
+            "subevent": true,
+            "consequence": {
+            },
+            "event": {
+              "text": "Are you sure !?!? I am BRIGOM, you cannot say no !",
+              "img": [
+                "img/Persos/crazyman.png",
+              ],
+              "answer": [
+                {
+                  "text": "Okay, okay come in ...",
+                  "subevent": false,
+                  "consequence": {
+                    "food": {
+                      "recover": -2,
+                      "loose": 5,
+                    },
+                    "wood": {
+                      "recover": -2,
+                      "loose": 5,
+                    },
+                    "water": {
+                      "recover": -2,
+                      "loose": 5,
+                    },
+                    "population": { "actual": 1 }
+                  },
+                  "event": {
+                  }
+                },
+                {
+                  "text": "Go away !",
+                  "subevent": false,
+                  "consequence": {
+                  },
+                  "event": {
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "text": "You meet a women and she ask you if she can come ?",
+        "img": [
+          "img/Persos/women0.png",
+          "img/Persos/women1.png",
+          "img/Persos/women2.png"
+        ],
+        "answer": [
+          {
+            "text": "Of course, come in !",
+            "subevent": false,
+            "consequence": {
+              "food": {
+                "recover": 7,
+                "loose": 3,
+              },
+              "wood": {
+                "recover": 6,
+                "loose": 3,
+              },
+              "water": {
+                "recover": 6,
+                "loose": 3,
+              },
+              "population": { "actual": 1 }
+            },
+            "event": {
+
+            }
+          },
+          {
+            "text": "Apologise and let her go",
+            "subevent": false,
+            "consequence": {
+            },
+            "event": {
+            }
+          }
+        ]
+      }
+    ],
+    "environnement": [
+    ],
+    "nothing": [
+    ],
+    "first": {
+      "text": "-1993- Cold War The United States and Russia abandoned themselves to a game of nuclear power, destroying forests, countrysides and cities, leaving the planet in a sorry state. From these ruins were born small groups of people who survived on the world's meagre resources. You are one of those people who found themselves alone after the disaster. But today, you have the chance to find a new companion. Who will you choose?",
+      "img": [],
+      "answer": [
+        {
+          "text": "A paralyzed little boy",
+          "subevent": true,
+          "consequence": {
+            "food": {
+              "actual": 40,
+              "recover": 6,
+              "loose": 3
+            },
+            "wood": {
+              "actual": 40,
+              "recover": 6,
+              "loose": 3
+            },
+            "water": {
+              "actual": 40,
+              "recover": 6,
+              "loose": 3
+            },
+            "population": { "actual": 1 }
+          },
+          "event": {
+            "text": "To thank you, the boy tells you his hiding place. You find food, water and firewood.",
+            "img": [],
+            "answer": [
+              {
+                "text": "Thank you",
+                "subevent": false,
+                "consequence": {},
+                "event": {}
+              }
+            ],
+          }
+        },
+        {
+          "text": "A fat man",
+          "subevent": true,
+          "consequence": {
+            "food": {
+              "recover": 13,
+              "loose": 5
+            },
+            "wood": {
+              "recover": 13,
+              "loose": 5
+            },
+            "water": {
+              "recover": 13,
+              "loose": 5
+            },
+            "population": { "actual": 1 }
+          },
+          "event": {
+            "text": "To thank you, the man tells you he will work hard every day.",
+            "img": [],
+            "answer": [
+              {
+                "text": "Thank you",
+                "subevent": false,
+                "consequence": {},
+                "event": {}
+              }
+            ],
+          }
+        },
+        {
+          "text": "A black women",
+          "subevent": true,
+          "consequence": {
+            "food": {
+              "max": 50,
+              "recover": 6,
+              "loose": 3
+            },
+            "wood": {
+              "max": 50,
+              "recover": 6,
+              "loose": 3
+            },
+            "water": {
+              "max": 50,
+              "recover": 6,
+              "loose": 3
+            },
+            "population": { "actual": 1 }
+          },
+          "event": {
+            "text": "To thank you, the woman offers you to enlarge stocks.",
+            "img": [],
+            "answer": [
+              {
+                "text": "Thank you",
+                "subevent": false,
+                "consequence": {},
+                "event": {}
+              }
+            ],
+          }
+        }
+      ]
+    },
+    "loose": {
+      "text": "",
+      "img": [],
+      "answer": [
+        {
+          "text": "Accept my mistake and go forward !",
+          "subevent": false,
+          "consequence": {},
+          "event": {}
+        }
+      ]
+    },
+    "daily": {
+      "text": "What ressources do you want to take today ?",
+      "img": [],
+      "answer": [
+        {
+          "text": "Food",
+          "subevent": false,
+          "message": "You got ",
+          "consequence": {},
+          "event": {}
+        },
+        {
+          "text": "Water",
+          "subevent": false,
+          "message": "You got ",
+          "consequence": {},
+          "event": {}
+        },
+        {
+          "text": "Wood",
+          "subevent": false,
+          "message": "You got ",
+          "consequence": {},
+          "event": {}
+        }
+      ]
+    }
+  }
+}
