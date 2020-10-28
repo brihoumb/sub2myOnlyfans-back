@@ -14,5 +14,8 @@
         "@typescript-eslint"
     ],
     "rules": {
+      "import/no-unresolved": "off",
+      "import/extensions": "off",
+      "no-unused-vars": "off"
     }
 }

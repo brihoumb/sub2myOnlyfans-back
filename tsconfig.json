@@ -10,12 +10,19 @@
     "outDir": "dist",
     "baseUrl": ".",
     "rootDir": "src",
+    "typeRoots": ["src/config"],
     "paths": {
       "*": [
         "node_modules/*"
       ]
     }
   },
+  "ts-node": {
+    "files": true
+  },
+  "files": [
+    "express.d.ts"
+  ],
   "include": [
     "src"
   ]

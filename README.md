@@ -16,7 +16,9 @@
 │   ├── config --> `Configuration scripts.`  
 │   ├── index.ts --> `Entry-point.`  
 │   ├── loaders --> `Start-up process modules.`  
+│   ├── middleware --> `Middleware scripts.`  
 │   ├── models --> `Database models.`  
+│   ├── routes --> `Routes scripts.`  
 │   ├── scripts --> `Long npm scripts.`  
 │   ├── services --> `Business logic.`  
 │   ├── sockets --> `Sockets handlers.`  
