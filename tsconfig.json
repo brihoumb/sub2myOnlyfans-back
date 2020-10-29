@@ -14,7 +14,8 @@
       "*": [
         "node_modules/*"
       ]
-    }
+    },
+    "resolveJsonModule": true
   },
   "include": [
     "src"
