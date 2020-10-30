@@ -1,24 +1,20 @@
-'use strict'
-
 import eventlist from './event.json';
 
 interface Reply {
   text: string;
-  img_path: string[];
+  imgPath: string[];
   button: string[];
   alive: boolean ;
   error: boolean ;
-  error_message: string;
+  errorMessage: string;
 }
 
 class Event {
-  date = 0;
+  day: number;
 
-  alive = true;
+  alive: boolean;
 
-  daily = false;
-
-  day = 0;
+  daily: boolean;
 
   event: { [k: string]: any } = {};
 
@@ -48,17 +44,19 @@ class Event {
   };
 
   constructor() {
-    console.log('creation of Event');
+    this.day = 0;
+    this.alive = true;
+    this.daily = false;
   }
 
   private eventToReply() {
-    let reply = {} as Reply;
+    const reply = {} as Reply;
 
     reply.text = this.event.text;
     if (this.event.img.length > 0) {
-      reply.img_path = this.event.img[Math.floor(Math.random() * this.event.img.length)];
+      reply.imgPath = this.event.img[Math.floor(Math.random() * this.event.img.length)];
     } else {
-      reply.img_path = [];
+      reply.imgPath = [];
     }
     reply.button = [];
     this.event.answer.forEach((element: { [k: string]: any }) => {
@@ -76,7 +74,7 @@ class Event {
       reply = this.eventToReply();
     } else {
       reply.error = true;
-      reply.error_message = 'Ask for first event but was already create';
+      reply.errorMessage = 'Ask for first event but was already create';
     }
 
     return reply;
@@ -104,12 +102,12 @@ class Event {
   }
 
   private looseEvent(message: string) {
-    let reply = {} as Reply;
+    const reply = {} as Reply;
 
     this.alive = false;
     this.event = eventlist.events.loose;
     reply.text = message;
-    reply.img_path = [];
+    reply.imgPath = [];
     reply.button = [];
     reply.button.push(this.event.answer[0].text);
     reply.alive = false;
@@ -118,81 +116,80 @@ class Event {
   }
 
   private applyConsequence(answer: number) {
-    const consequence: { [k: string]: any } = this.event.answer[answer].consequence;
+    const consequence: { [k:string]: any } = this.event.answer;
+    // const consequence: { [k: string]: any } = this.event.answer[answer].consequence;
 
-    if (Object.keys(consequence).length > 0) {
-
+    if (Object.keys(consequence[answer].consequence).length > 0) {
       // Food
-      if (consequence.food !== undefined) {
-        if (consequence.food.max !== undefined) {
-          this.data.food.max += consequence.food.max;
+      if (consequence[answer].consequence.food !== undefined) {
+        if (consequence[answer].consequence.food.max !== undefined) {
+          this.data.food.max += consequence[answer].consequence.food.max;
         }
-        if (consequence.food.recover !== undefined) {
-          this.data.food.recover += consequence.food.recover;
+        if (consequence[answer].consequence.food.recover !== undefined) {
+          this.data.food.recover += consequence[answer].consequence.food.recover;
         }
-        if (consequence.food.loose !== undefined) {
-          this.data.food.loose += consequence.food.loose;
+        if (consequence[answer].consequence.food.loose !== undefined) {
+          this.data.food.loose += consequence[answer].consequence.food.loose;
         }
-        if (consequence.food.actual !== undefined) {
-          this.data.food.actual += consequence.food.actual;
+        if (consequence[answer].consequence.food.actual !== undefined) {
+          this.data.food.actual += consequence[answer].consequence.food.actual;
         }
       }
 
       // Wood
-      if (consequence.wood !== undefined) {
-        if (consequence.wood.max !== undefined) {
-          this.data.wood.max += consequence.wood.max;
+      if (consequence[answer].consequence.wood !== undefined) {
+        if (consequence[answer].consequence.wood.max !== undefined) {
+          this.data.wood.max += consequence[answer].consequence.wood.max;
         }
-        if (consequence.wood.recover !== undefined) {
-          this.data.wood.recover += consequence.wood.recover;
+        if (consequence[answer].consequence.wood.recover !== undefined) {
+          this.data.wood.recover += consequence[answer].consequence.wood.recover;
         }
-        if (consequence.wood.loose !== undefined) {
-          this.data.wood.loose += consequence.wood.loose;
+        if (consequence[answer].consequence.wood.loose !== undefined) {
+          this.data.wood.loose += consequence[answer].consequence.wood.loose;
         }
-        if (consequence.wood.actual !== undefined) {
-          this.data.wood.actual += consequence.wood.actual;
+        if (consequence[answer].consequence.wood.actual !== undefined) {
+          this.data.wood.actual += consequence[answer].consequence.wood.actual;
         }
       }
 
       // Water
-      if (consequence.water !== undefined) {
-        if (consequence.water.max !== undefined) {
-          this.data.water.max += consequence.water.max;
+      if (consequence[answer].consequence.water !== undefined) {
+        if (consequence[answer].consequence.water.max !== undefined) {
+          this.data.water.max += consequence[answer].consequence.water.max;
         }
-        if (consequence.water.recover !== undefined) {
-          this.data.water.recover += consequence.water.recover;
+        if (consequence[answer].consequence.water.recover !== undefined) {
+          this.data.water.recover += consequence[answer].consequence.water.recover;
         }
-        if (consequence.water.loose !== undefined) {
-          this.data.water.loose += consequence.water.loose;
+        if (consequence[answer].consequence.water.loose !== undefined) {
+          this.data.water.loose += consequence[answer].consequence.water.loose;
         }
-        if (consequence.water.actual !== undefined) {
-          this.data.water.actual += consequence.water.actual;
+        if (consequence[answer].consequence.water.actual !== undefined) {
+          this.data.water.actual += consequence[answer].consequence.water.actual;
         }
       }
 
       // Population
-      if (consequence.population !== undefined) {
-        if (consequence.population.max !== undefined) {
-          this.data.population.max += consequence.population.max;
+      if (consequence[answer].consequence.population !== undefined) {
+        if (consequence[answer].consequence.population.max !== undefined) {
+          this.data.population.max += consequence[answer].consequence.population.max;
         }
-        if (consequence.population.actual !== undefined) {
-          this.data.population.actual += consequence.population.actual;
+        if (consequence[answer].consequence.population.actual !== undefined) {
+          this.data.population.actual += consequence[answer].consequence.population.actual;
         }
       }
-
     }
 
     // Daily check
     if (this.daily) {
       switch (answer) {
         case 0:
-          this.data.food.actual += Math.round(this.data.food.recover / 4 * 3);
+          this.data.food.actual += Math.round((this.data.food.recover / 4) * 3);
           break;
         case 1:
-          this.data.wood.actual += Math.round(this.data.wood.recover / 4 * 3);
+          this.data.wood.actual += Math.round((this.data.wood.recover / 4) * 3);
           break;
         case 2:
-          this.data.water.actual += Math.round(this.data.water.recover / 4 * 3);
+          this.data.water.actual += Math.round((this.data.water.recover / 4) * 3);
           break;
         default:
           break;
@@ -244,7 +241,7 @@ class Event {
     let reply = {} as Reply;
 
     reply.error = false;
-    reply.error_message = '';
+    reply.errorMessage = '';
     if (answer === -1) {
       reply = Object.assign(reply, this.firstEvent());
     } else if (this.event && answer >= 0 && answer < this.event.answer.length) {
@@ -260,16 +257,16 @@ class Event {
     } else {
       reply.error = true;
       if (this.event !== null) {
-        reply.error_message = 'Reply given in parameter, but no previous event exist';
+        reply.errorMessage = 'Reply given in parameter, but no previous event exist';
       } else {
-        reply.error_message = 'Argument is out of possibilities (< -1 || > possible answers)';
+        reply.errorMessage = 'Argument is out of possibilities (< -1 || > possible answers)';
       }
     }
     return reply;
   }
 
   metaData() {
-    let reply : { [k: string]: any } = {};
+    const reply : { [k: string]: any } = {};
 
     // Food
     reply.food = {};
