@@ -21,7 +21,7 @@
     "files": true
   },
   "files": [
-    "express.d.ts"
+    "src/config/express.d.ts"
   ],
   "include": [
     "src"
