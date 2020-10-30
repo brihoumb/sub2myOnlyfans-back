@@ -1,4 +1,4 @@
-import * as jwt from 'jsonwebtoken';
+import { verify } from 'jsonwebtoken';
 import { Request, Response, NextFunction } from 'express';
 
 const verification = (req: Request,
@@ -8,8 +8,7 @@ const verification = (req: Request,
     let token = req.headers.authorization;
     if (token) {
       [, token] = token.split(' ');
-      const decoded = jwt.verify(token,
-        'djMpZ}M]µu0Q$it]X$#!H[1£E{c/ù£qFP^D°O)B+$}');
+      const decoded = verify(token, 'djMpZ}M]µu0Q$it]X$#!H[1£E{c/ù£qFP^D°O)B+$}');
       req.userData = decoded;
       next();
       return null;

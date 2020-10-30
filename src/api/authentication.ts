@@ -1,8 +1,7 @@
 import bcrypt from 'bcrypt';
-import mongoose from 'mongoose';
-import * as jwt from 'jsonwebtoken';
+import { sign } from 'jsonwebtoken';
 import { Request, Response } from 'express';
-import User from '../models/mongo';
+import User from '../models/user';
 
 export const login = (req: Request, res: Response): void => {
   if (req.body === undefined
@@ -23,7 +22,7 @@ export const login = (req: Request, res: Response): void => {
           return;
         }
         if (result) {
-          const token = jwt.sign({
+          const token = sign({
             username: user.username,
             userId: user.id,
           },
@@ -64,19 +63,8 @@ export const signup = (req: Request, res: Response): void => {
         });
         user.save()
           .then(() => res.status(201).json({ message: 'User created successfully' }))
-          .catch((error: Error) => res.status(500).json({ error: "Unknown error" }));
+          .catch((error: Error) => res.status(500).json({ error: `Unknown error: ${error}` }));
       });
     })
     .catch((err: Error) => res.status(500).json({ error: err }));
-};
-
-export const all = (req: Request, res: Response): void => {
-  User.find()
-    .exec()
-    .then((users: Array<object> | null): void => {
-      res.status(200).json(users);
-    })
-    .catch((err: Error) => {
-      res.status(500).json({ error: err });
-    });
 };
