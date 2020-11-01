@@ -4,6 +4,24 @@
 >> By: Benjamin Brihoum, Victor Hazard, William Tessari.
 >
 
+## Installation ##
+Run `npm install` then `npm run init` to initialise the project.
+Then start your local mongoDB on port 27017.
+
+## Deployment ##
+Run `npm test` for developper purpose otherwise run `npm run prod`.
+
+## Routes ##
+`/user/signin` => POST {"username", "password"} => {"message" || "error"};  
+`/user/login` => POST {"username", "password"} => {"message" && "token" || "error"};  
+`/migration/` => GET {} => {{DATABASE CONTENT} || "error"};  
+`/migration/up` => PATCH {"new column": "default value"} => {"message" || "error"};  
+`/migration/down` => PATCH {"column to delete": ""} => {"message" || "error"};  
+
+## Sockets ##
+`.on('getEvent')` => "" => `.emit('answer', "JSON.stringify(event)")`  
+`.on('replyEvent')` => "int" => ?`.emit('dead')`  
+
 ## <ins>Project Architecture:</ins> ##
 \. --> `"YES I AM!" - Mohamedo Avuduru`  
 ├── Dockerfile --> `Docker container to run node and mongoledb. (send help)`  
@@ -13,14 +31,12 @@
 ├── README.md --> `You are here!`  
 ├── src --> `Does it needs any explanation?`  
 │   ├── api --> `Route controller.`  
-│   ├── config --> `Configuration scripts.`  
-│   ├── index.ts --> `Entry-point.`  
-│   ├── loaders --> `Start-up process modules.`  
+│   ├── config --> `Type definition.`  
+│   ├── events --> `Events json.`  
 │   ├── middleware --> `Middleware scripts.`  
+│   ├── migrations --> `Migrations scripts.`  
 │   ├── models --> `Database models.`  
 │   ├── routes --> `Routes scripts.`  
-│   ├── scripts --> `Long npm scripts.`  
-│   ├── services --> `Business logic.`  
 │   ├── sockets --> `Sockets handlers.`  
-│   └── subscribers --> `Async task handlers.`  
+│   ├── index.ts --> `Entry-point.`  
 └── tsconfig.json --> `Typescript compiler configuration.`

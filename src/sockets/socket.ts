@@ -15,17 +15,17 @@ export const initSocket = () => {
 
 export const create = (socket: Socket) => {
   if (!wait) {
-    if (turn.imgPath !== "") {
-      turn.imgPath = new Buffer(readFileSync(`assets/${turn.imgPath}`)).toString('base64');
-    };
+    if (turn.imgPath !== '') {
+      turn.imgPath = Buffer.from(readFileSync(`assets/${turn.imgPath}`)).toString('base64');
+    }
     socket.emit('answer', JSON.stringify(turn));
     wait = true;
-  };
+  }
 };
 
 export const reply = (msg: string, socket: Socket) => {
-  if (!Number.isNaN(parseInt(msg)) && wait) {
-    turn = playerEvent.roll(parseInt(msg));
+  if (!Number.isNaN(parseInt(msg, 10)) && wait) {
+    turn = playerEvent.roll(parseInt(msg, 10));
     Object.assign(turn, playerEvent.metaData());
     wait = false;
     if (!playerEvent.isAlive()) {

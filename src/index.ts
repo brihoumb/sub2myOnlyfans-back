@@ -39,7 +39,6 @@ io.on('connection', (socket: any) => {
   socket.on('replyEvent', (msg: string) => reply(msg, socket));
 });
 
-
 /* eslint-disable no-console */
 server.listen(port, () => console.log(`Listening on port ${port}`));
 /* eslint-enable no-console */
