@@ -1,11 +1,11 @@
-import eventlist from './event.json';
+import eventlist from '../events/event.json';
 
 interface Reply {
   text: string;
-  imgPath: string[];
+  imgPath: string;
   button: string[];
-  alive: boolean ;
-  error: boolean ;
+  alive: boolean;
+  error: boolean;
   errorMessage: string;
 }
 
@@ -56,7 +56,7 @@ class Event {
     if (this.event.img.length > 0) {
       reply.imgPath = this.event.img[Math.floor(Math.random() * this.event.img.length)];
     } else {
-      reply.imgPath = [];
+      reply.imgPath = '';
     }
     reply.button = [];
     this.event.answer.forEach((element: { [k: string]: any }) => {
@@ -107,7 +107,7 @@ class Event {
     this.alive = false;
     this.event = eventlist.events.loose;
     reply.text = message;
-    reply.imgPath = [];
+    reply.imgPath = '';
     reply.button = [];
     reply.button.push(this.event.answer[0].text);
     reply.alive = false;
@@ -294,3 +294,5 @@ class Event {
     return reply;
   }
 }
+
+export default Event;
