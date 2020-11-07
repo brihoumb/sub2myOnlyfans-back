@@ -7,9 +7,9 @@
     "clean": "rm -fr dist/*",
     "lint": "eslint src --ext ts",
     "tsc": "tsc",
-    "build": "npm run clean && npm run lint && npm run tsc",
+    "build": "npm run init && npm run clean && npm run lint && npm run tsc",
     "test": "nodemon --watch src -e ts --files src/index.ts",
-    "start": "npm run clean && npm run tsc && node dist",
+    "start": "npm run init && npm run clean && npm run tsc && node dist",
     "prod": "npm start",
     "init": "./init_type_mongo.sh"
   },
